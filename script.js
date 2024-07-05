@@ -16,11 +16,3 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 });
-
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    var recaptcha = document.querySelector('.g-recaptcha-response').value;
-    if (!recaptcha) {
-        event.preventDefault();
-        alert('Por favor, complete o reCAPTCHA.');
-    }
-});
