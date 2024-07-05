@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTZ Concept</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        .schedule {
+            margin-top: 20px;
+        }
+        .time-slot {
+            padding: 10px;
+            margin-bottom: 5px;
+        }
+        .occupied {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .free {
+            background-color: #d4edda;
+            color: #155724;
+        }
+    </style>
+</head>
+<body>
+    <!-- Other sections of the page -->
+
+    <!-- Schedule section -->
+    <section id="schedule" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Agenda de Horários</h2>
+            <div id="schedule-container" class="schedule"></div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 NTZ Concept</p>
+        </div>
+    </footer>
+
+    <script>
+        const scheduleContainer = document.getElementById('schedule-container');
+
+        // Fake data for the schedule
+        const scheduleData = [
+            { day: 'Segunda-feira', slots: [
+                { time: '09:00 - 10:00', occupied: true },
+                { time: '10:00 - 11:00', occupied: true },
+                { time: '11:00 - 12:00', occupied: true },
+                { time: '13:00 - 14:00', occupied: true },
+                { time: '14:00 - 15:00', occupied: true },
+                { time: '15:00 - 16:00', occupied: false },
+            ]},
+            { day: 'Terça-feira', slots: [
+                { time: '09:00 - 10:00', occupied: false },
+                { time: '10:00 - 11:00', occupied: true },
+                { time: '11:00 - 12:00', occupied: true },
+                { time: '13:00 - 14:00', occupied: true },
+                { time: '14:00 - 15:00', occupied: false },
+                { time: '15:00 - 16:00', occupied: false },
+            ]},
+            { day: 'Quarta-feira', slots: [
+                { time: '09:00 - 10:00', occupied: false },
+                { time: '10:00 - 11:00', occupied: true },
+                { time: '11:00 - 12:00', occupied: false },
+                { time: '13:00 - 14:00', occupied: true },
+                { time: '14:00 - 15:00', occupied: false },
+                { time: '15:00 - 16:00', occupied: true },
+            ]},
+            { day: 'Quinta-feira', slots: [
+                { time: '09:00 - 10:00', occupied: true },
+                { time: '10:00 - 11:00', occupied: true },
+                { time: '11:00 - 12:00', occupied: false },
+                { time: '13:00 - 14:00', occupied: true },
+                { time: '14:00 - 15:00', occupied: true },
+                { time: '15:00 - 16:00', occupied: true },
+            ]},
+            { day: 'Sexta-feira', slots: [
+                { time: '09:00 - 10:00', occupied: false },
+                { time: '10:00 - 11:00', occupied: true },
+                { time: '11:00 - 12:00', occupied: false },
+                { time: '13:00 - 14:00', occupied: true },
+                { time: '14:00 - 15:00', occupied: true },
+                { time: '15:00 - 16:00', occupied: true },
+            ]},
+            { day: 'Sábado', slots: [
+                { time: '09:00 - 10:00', occupied: true },
+                { time: '10:00 - 11:00', occupied: true },
+                { time: '11:00 - 12:00', occupied: true },
+                { time: '13:00 - 14:00', occupied: true },
+                { time: '14:00 - 15:00', occupied: true },
+                { time: '15:00 - 16:00', occupied: true },
+            ]},
+        ];
+
+        function createScheduleHTML(scheduleData) {
+            return scheduleData.map(dayData => {
+                const slotsHTML = dayData.slots.map(slot => `
+                    <div class="time-slot ${slot.occupied ? 'occupied' : 'free'}">
+                        ${slot.time} - ${slot.occupied ? 'Ocupado' : 'Livre'}
+                    </div>
+                `).join('');
+                return `
+                    <div class="day-schedule mb-4">
+                        <h4>${dayData.day}</h4>
+                        ${slotsHTML}
+                    </div>
+                `;
+            }).join('');
+        }
+
+        scheduleContainer.innerHTML = createScheduleHTML(scheduleData);
+    </script>
+</body>
+</html>

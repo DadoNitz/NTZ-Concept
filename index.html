@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NTZ Concept</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js" defer></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <header class="bg-dark text-white py-3 fixed-top">
+        <div class="container d-flex justify-content-between align-items-center">
+            <img src="src/img/logo.jpg" alt="Logo NTZ Concept" class="logo img-fluid">
+            <h1 class="h3 mb-0">NTZ Concept</h1>
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item"><a href="#services" class="nav-link">Serviços</a></li>
+                        <li class="nav-item"><a href="#about" class="nav-link">Sobre nós</a></li>
+                        <li class="nav-item"><a href="#team" class="nav-link">Equipe</a></li>
+                        <li class="nav-item"><a href="#location" class="nav-link">Contatos</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section id="services" class="py-5 bg-light mt-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Nossos Serviços</h2>
+            <div class="row">
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Cortes</h3>
+                            <p class="card-text">Nosso serviço de corte de cabelo é mais do que apenas aparar as pontas. Nossos especialistas em cabelo estão aqui para criar looks que refletem sua personalidade e realçam sua beleza natural. De cortes clássicos a tendências modernas, estamos aqui para transformar seus cabelos em algo verdadeiramente especial.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="src/img/IMG-20240410-WA0046.jpg" alt="Corte" class="img-fluid rounded">
+                                </div>
+                                <div class="col-4">
+                                    <img src="src/img/IMG-20240410-WA0032.jpg" alt="Mechas" class="img-fluid rounded">
+                                </div>
+                                <div class="col-4">
+                                    <img src="src/img/IMG-20240410-WA0075.jpg" alt="Cliente" class="img-fluid rounded">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h3 class="card-title">Mechas</h3>
+                            <p class="card-text">Dê uma nova dimensão ao seu visual com nossos serviços de mechas. Das mechas sutis para adicionar profundidade, até as mais ousadas e vibrantes, nossa equipe está pronta para criar um efeito que ilumina e destaca seus cabelos. Deixe-nos ajudá-lo a expressar sua individualidade e brilhar com mechas que são verdadeiramente suas.</p>
+                        </div>
+                        <div class="card-footer bg-transparent border-0">
+                            <div class="row">
+                                <div class="col-4">
+                                    <img src="src/img/IMG-20240410-WA0041.jpg" alt="Corte" class="img-fluid rounded">
+                                </div>
+                                <div class="col-4">
+                                    <img src="src/img/IMG-20240410-WA0051.jpg" alt="Mechas" class="img-fluid rounded">
+                                </div>
+                                <div class="col-4">
+                                    <img src="src/img/IMG-20240410-WA0074.jpg" alt="Cliente" class="img-fluid rounded">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="https://wa.me/5511981769720" target="_blank" class="btn btn-success btn-lg">
+                    Agende um horário conosco via WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">Sobre Nós</h2>
+            <p class="text-center">O NTZ Concept é um salão de beleza dedicado a proporcionar uma experiência excepcional aos nossos clientes. Com uma equipe talentosa e apaixonada, estamos comprometidos em ajudá-lo a alcançar a aparência dos seus sonhos.</p>
+        </div>
+    </section>
+
+    <section id="team" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Nossa Equipe</h2>
+            <div class="text-center">
+                <img src="src/img/IMG-20240410-WA0030.jpg" alt="Equipe NTZ Concept" class="img-fluid rounded mb-3">
+                <p>Conheça a equipe talentosa por trás do NTZ Concept, dedicada a proporcionar uma experiência excepcional aos nossos clientes.</p>
+            </div>
+        </div>
+    </section>
+    
+
+
+    <section id="schedule" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Agenda de Horários</h2>
+            <div id="schedule-container" class="schedule"></div>
+            <div class="text-center">
+                <a href="/agenda.html" target="_blank" class="btn btn-primary btn-lg">
+                    Acessar agenda
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Entre em Contato via WhatsApp</h2>
+            <div class="text-center mt-5">
+                <a href="https://wa.me/5511981769720" target="_blank" class="btn btn-success btn-lg">
+                    Agende um horário conosco via WhatsApp
+                </a>
+            </div>
+            <h1 class="text-center my-5">Ou envie um email</h1>
+            <form id="contact-form" action="mailto:ntzconcept@gmail.com" method="post" enctype="text/plain">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="name">Nome</label>
+                        <input type="text" class="form-control" id="name" name="name" required>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" class="form-control" id="phone" name="phone" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensagem</label>
+                    <textarea class="form-control" id="message" name="message" rows="4" required></textarea>
+                </div>
+                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY"></div>
+                <div class="text-center mt-3">
+                    <button type="submit" class="btn btn-primary">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+        <section id="location" class="py-5">
+            <div class="container">
+                <h2 class="text-center mb-5">Onde Estamos Localizados?</h2>
+                <p class="text-center">O NTZ está localizado em Novo Hamburgo, no bairro Jardim Mauá, perto da prefeitura.</p>
+                <div class="embed-responsive embed-responsive-16by9">
+                    <iframe class="embed-responsive-item" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1732.969704945159!2d-51.11835470293081!3d-29.692536283994322!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95194320fa213c39%3A0xf9dbb0516fa736bf!2sNTZ%20Concept!5e0!3m2!1sen!2sbr!4v1712926063305!5m2!1sen!2sbr" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+            <footer class="bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2024 NTZ Concept</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,19 @@
+body {
+    background-color: #f8f9fa;
+}
+
+.card {
+    margin-top: 100px;
+}
+
+#errorMessage {
+    display: none;
+}
+
+#errorMessage.d-none {
+    display: none;
+}
+
+#errorMessage:not(.d-none) {
+    display: block;
+}
