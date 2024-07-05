@@ -1,18 +1,16 @@
-document.addEventListener("DOMContentLoaded", function() {
-    const navbarLinks = document.querySelectorAll(".navbar-nav .nav-link");
-
-    navbarLinks.forEach(link => {
-        link.addEventListener("click", function(event) {
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function(event) {
             event.preventDefault();
-            const targetId = this.getAttribute("href").substring(1);
-            const targetSection = document.getElementById(targetId);
-
-            if (targetSection) {
-                window.scrollTo({
-                    top: targetSection.offsetTop - 70,
-                    behavior: "smooth"
-                });
-            }
+            const targetId = this.getAttribute('href').substring(1);
+            const targetElement = document.getElementById(targetId);
+            
+            window.scrollTo({
+                top: targetElement.offsetTop - 70,
+                behavior: 'smooth'
+            });
         });
     });
 });
